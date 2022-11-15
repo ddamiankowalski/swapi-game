@@ -1,0 +1,24 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.main-title {
+    font-size: .9rem;
+    padding-left: 1rem;
+}
+
+.share-section {
+    font-size: 1rem;
+    
+    & .desc {
+        transition: opacity .2s ease-in-out;
+        padding-right: 1rem;
+        margin: auto;
+        opacity: 1;
+        font-size: .8rem;
+
+        &.hidden {
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <button (click)="toggleNavigation()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <app-toolbar-buttons></app-toolbar-buttons>
+    <span class="spacer"></span>
+    <div class="share-section">
+        <span class="desc" [ngClass]="{'hidden': shareHover}">Share your score</span>
+        <button (mouseleave)="toggleHelp(true)" (mouseenter)="toggleHelp(false)" mat-icon-button aria-label="Share your score">
+            <mat-icon>share</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>

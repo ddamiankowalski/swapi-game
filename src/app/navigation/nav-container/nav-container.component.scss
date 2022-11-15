@@ -1,0 +1,35 @@
+mat-sidenav-container {
+    height: 100%
+}
+
+mat-sidenav {
+    width: 16rem;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    margin: .5rem;
+
+    &__image {
+        background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+        background-size: cover;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+    }
+
+    & .desc {
+        margin: auto;
+    }
+}
+
+mat-list {
+    height: 3rem;
+}
