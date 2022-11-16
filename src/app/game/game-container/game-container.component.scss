@@ -1,0 +1,15 @@
+:host {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+}
+
+.quotes-container {
+    flex-grow: 1;
+}
+
+.game-cards {
+    background-color: white;
+    height: 0;
+}

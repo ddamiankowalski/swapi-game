@@ -1,1 +1,7 @@
-<app-toolbar></app-toolbar>
+<div class="content-wrapper">
+    <app-toolbar></app-toolbar>
+    <div class="content-dynamic" [@parentRouteAnimations]="getRouteAnimationData()">
+        <router-outlet></router-outlet>
+    </div>
+    <!-- <app-main-message></app-main-message> -->
+</div>

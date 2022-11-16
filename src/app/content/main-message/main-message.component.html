@@ -1,0 +1,23 @@
+<section>
+    <div class="main-message">
+        <h1>Star Wars API</h1>
+        <p>If you want to start a new game, press the button below</p>
+        <div class="action-section">
+            <app-globalbutton 
+                (click)="startGame()"
+                [type]="'raised'" 
+                text="Play" 
+                color="accent"
+                >
+            </app-globalbutton>
+            <app-globalbutton 
+                (click)="goGithub('https://github.com/ddamiankowalski?tab=repositories')"
+                [type]="'raised'" 
+                text="GitHub" 
+                color="primary" 
+                [tooltip]="{ message: 'Cheeky self-marketing' }"
+                >
+            </app-globalbutton>
+        </div>
+    </div>
+</section>

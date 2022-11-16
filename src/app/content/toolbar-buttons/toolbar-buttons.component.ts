@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 interface menuItem {
-  itemName: string
+  name: string
 }
 
 @Component({
@@ -14,12 +14,16 @@ export class ToolbarButtonsComponent implements OnInit {
   constructor() { }
 
   public menuItems: Array<menuItem> = [
-    { itemName: 'play' },
-    { itemName: 'score' },
-    { itemName: 'reset' }
+    { name: 'play' },
+    { name: 'score' },
+    { name: 'reset' }
   ];
 
   ngOnInit(): void {
+  }
+
+  handleClick(event: any) {
+    console.log(event)
   }
 
 }

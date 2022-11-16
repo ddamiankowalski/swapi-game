@@ -1,0 +1,38 @@
+<ng-container *ngIf="{ 'icon': iconButton, 'button': stdButton, 'stroked': strokedButton, 'raised': raisedButton  } as templates">
+    <ng-template [ngTemplateOutlet]="templates[type]"></ng-template>
+</ng-container>
+
+<ng-template #stdButton>
+    <button [matTooltip]="tooltipMessage" [matTooltipDisabled]="isTooltipDisabled" 
+        [matTooltipPosition]="tooltipPosition"
+        [color]="color"
+        mat-button aria-label="Share your score">
+        {{ text }}
+    </button>
+</ng-template>
+
+<ng-template #raisedButton>
+    <button [matTooltip]="tooltipMessage" [matTooltipDisabled]="isTooltipDisabled" 
+        [matTooltipPosition]="tooltipPosition"
+        [color]="color"
+        mat-raised-button aria-label="Share your score">
+        {{ text }}
+    </button>
+</ng-template>
+
+<ng-template #strokedButton>
+    <button [matTooltip]="tooltipMessage" [matTooltipDisabled]="isTooltipDisabled" 
+        [matTooltipPosition]="tooltipPosition"
+        [color]="color"
+        mat-stroked-button aria-label="Share your score">
+        {{ text }}
+    </button>
+</ng-template>
+
+<ng-template #iconButton>
+    <button [matTooltip]="tooltipMessage" [matTooltipDisabled]="isTooltipDisabled" 
+        [matTooltipPosition]="tooltipPosition"
+        mat-icon-button aria-label="Share your score">
+        <mat-icon>{{ icon }}</mat-icon>
+    </button>
+</ng-template>
