@@ -1,5 +1,5 @@
 <div class="button-row">
     <ng-template ngFor let-item [ngForOf]="menuItems">
-        <app-globalbutton (click)="handleClick($event)" [text]="item.name"></app-globalbutton>
+        <app-globalbutton (click)="item.onclick()" [text]="item.name"></app-globalbutton>
     </ng-template>
 </div>

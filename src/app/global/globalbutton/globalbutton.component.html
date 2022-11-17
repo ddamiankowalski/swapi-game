@@ -3,36 +3,36 @@
 </ng-container>
 
 <ng-template #stdButton>
-    <button [matTooltip]="tooltipMessage" [matTooltipDisabled]="isTooltipDisabled" 
+    <button (click)="clickBtn()" [matTooltip]="tooltipMessage" [matTooltipDisabled]="isTooltipDisabled" 
         [matTooltipPosition]="tooltipPosition"
-        [color]="color"
-        mat-button aria-label="Share your score">
+        [color]="color" [disabled]="disabled"
+        mat-button>
         {{ text }}
     </button>
 </ng-template>
 
 <ng-template #raisedButton>
-    <button [matTooltip]="tooltipMessage" [matTooltipDisabled]="isTooltipDisabled" 
+    <button (click)="clickBtn()" [matTooltip]="tooltipMessage" [matTooltipDisabled]="isTooltipDisabled" 
         [matTooltipPosition]="tooltipPosition"
-        [color]="color"
-        mat-raised-button aria-label="Share your score">
+        [color]="color" [disabled]="disabled"
+        mat-raised-button>
         {{ text }}
     </button>
 </ng-template>
 
-<ng-template #strokedButton>
-    <button [matTooltip]="tooltipMessage" [matTooltipDisabled]="isTooltipDisabled" 
+<ng-template (click)="clickBtn()" #strokedButton>
+    <button  [matTooltip]="tooltipMessage" [matTooltipDisabled]="isTooltipDisabled" 
         [matTooltipPosition]="tooltipPosition"
-        [color]="color"
-        mat-stroked-button aria-label="Share your score">
+        [color]="color" [disabled]="disabled"
+        mat-stroked-button>
         {{ text }}
     </button>
 </ng-template>
 
 <ng-template #iconButton>
-    <button [matTooltip]="tooltipMessage" [matTooltipDisabled]="isTooltipDisabled" 
+    <button (click)="clickBtn()" [matTooltip]="tooltipMessage" [matTooltipDisabled]="isTooltipDisabled" 
         [matTooltipPosition]="tooltipPosition"
-        mat-icon-button aria-label="Share your score">
+        mat-icon-button>
         <mat-icon>{{ icon }}</mat-icon>
     </button>
 </ng-template>

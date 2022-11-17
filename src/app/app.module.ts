@@ -10,6 +10,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { ContentModule } from './content/content.module';
 import { GameModule } from './game/game.module';
+import { BackendService } from './services/backend.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,9 +25,12 @@ import { GameModule } from './game/game.module';
     MatDividerModule,
     MatIconModule,
     ContentModule,
-    GameModule
+    GameModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    BackendService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

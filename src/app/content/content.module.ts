@@ -9,6 +9,8 @@ import { GlobalModule } from '../global/global.module';
 import { MainMessageComponent } from './main-message/main-message.component';
 import { RouterModule } from '@angular/router';
 import { routes } from '../routes/routes';
+import { ScoreDialogComponent } from './score-dialog/score-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -16,14 +18,16 @@ import { routes } from '../routes/routes';
     ContentContainerComponent,
     ToolbarComponent,
     ToolbarButtonsComponent,
-    MainMessageComponent
+    MainMessageComponent,
+    ScoreDialogComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
     CommonModule,
     GlobalModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   exports: [
     ContentContainerComponent

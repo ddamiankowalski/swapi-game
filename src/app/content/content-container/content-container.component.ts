@@ -17,18 +17,18 @@ import { ChildrenOutletContexts } from '@angular/router';
             left: 0,
             width: '100%',
           })
-        ]),
+        ], { optional: true }),
         query(':enter', [
           style({ opacity: 0 }),
         ]),
         query(':leave', [
           style({ opacity: 1 }),
-        ]),
-        group([
-          query('@*', animateChild()),
+        ], { optional: true }),
+        sequence([
           query(':leave', [
             animate('300ms ease-out', style({ opacity: 0, transform: 'translateY(-10rem)' })),
           ], { optional: true }),
+          query('@*', animateChild()),
           query(':enter', [
             animate('300ms ease-out', style({ opacity: 1 })),
           ])

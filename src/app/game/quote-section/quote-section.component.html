@@ -1,5 +1,16 @@
-<section>
+<section class="quote-button-section">
     <div class="quote-container">
         <app-quote></app-quote>
+    </div>
+    <div class="button">
+        <app-globalbutton (click)="stopGame()" type="raised" color="accent" text="Stop"></app-globalbutton>
+        <app-globalbutton 
+            (click)="goGithub('https://github.com/ddamiankowalski?tab=repositories')"
+            [type]="'raised'" 
+            text="GitHub" 
+            color="primary" 
+            [tooltip]="{ message: 'Have a looksie!' }"
+        >
+    </app-globalbutton>
     </div>
 </section>

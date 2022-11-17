@@ -15,11 +15,11 @@ export class QuoteComponent implements OnInit {
   /**
    * A quote that is currently being displayed
    */
-  public currentQuote: string = '';
+  public currentQuote: string = '"May the force be with you!"';
 
   /**
    * Author of the quote
    */
-  public author: string = '';
+  public author: string = 'Master Yoda';
 
 }

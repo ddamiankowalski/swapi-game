@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
+import { ScoreboardService } from 'src/app/services/scoreboard.service';
 
 @Component({
   selector: 'app-sidebar-container',
@@ -9,7 +10,8 @@ import { NavigationService } from 'src/app/services/navigation.service';
 export class SidebarContainerComponent implements OnInit {
 
   constructor(
-    public navigation: NavigationService
+    public navigation: NavigationService,
+    public scoreboard: ScoreboardService
   ) { }
 
   public isOpened: boolean = false;

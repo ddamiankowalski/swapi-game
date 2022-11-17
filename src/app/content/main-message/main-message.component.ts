@@ -16,11 +16,17 @@ export class MainMessageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Handler for the button to start the game
+   */
   public startGame(): void {
-    console.log(this.route)
     this.router.navigate(['game'], { relativeTo: this.route })
   }
 
+  /**
+   * Go to github button handler
+   * @param url github url
+   */
   public goGithub(url: string): void {
     window.open(url, '_blank');
   }

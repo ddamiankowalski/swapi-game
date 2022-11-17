@@ -5,3 +5,18 @@
     width: 100%;
     height: 100%;
 }
+
+.quote-button-section {
+    display: flex;
+    height: 100%;
+    max-height: 13rem;
+    flex-flow: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    gap: 1rem;
+}

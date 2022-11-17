@@ -7,10 +7,12 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
+import { SavedScoreItemComponent } from './saved-score-item/saved-score-item.component';
 
 @NgModule({
   declarations: [
-    SidebarContainerComponent
+    SidebarContainerComponent,
+    SavedScoreItemComponent
   ],
   imports: [
     CommonModule,

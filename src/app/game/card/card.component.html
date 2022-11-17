@@ -1,0 +1,26 @@
+<mat-card *ngIf="cardModel">
+    <mat-card-title>{{ cardModel.cardName }}</mat-card-title>
+    <mat-card-subtitle>Name of your champion</mat-card-subtitle>
+    <mat-card-content>
+        <p class="attribute-text"><span>Mass: </span>{{ cardModel.cardMass }}</p>
+        <p class="attribute-text"><span>Starship crew: </span>{{ game.starshipCrewAmount$ | async }}</p>
+        <mat-button-toggle-group *ngIf="cardModel.cardStarship?.length !== 0" [value]="fightOption" (change)="changeFightOption($event)">
+            <mat-button-toggle value="mass">Use Mass</mat-button-toggle>
+            <mat-button-toggle value="starship">Use Starship</mat-button-toggle>
+        </mat-button-toggle-group>
+        <div class="enemy-section" *ngIf="enemyModel">
+            <mat-divider></mat-divider>
+            <mat-card-title>{{ enemyModel.cardName }}</mat-card-title>
+            <mat-card-subtitle>Name of your opponent</mat-card-subtitle>
+            <p class="attribute-text"><span>Mass: </span>{{ enemyModel.cardMass }}</p>
+            <p class="attribute-text"><span>Starship crew: </span>{{ enemyModel.cardStarshipValue }}</p>
+        </div>
+    </mat-card-content>
+    <mat-card-footer>
+        <mat-progress-bar *ngIf="game.isLoading" mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+</mat-card>
+<div *ngIf="!cardModel" class="no-card">
+    <h1>Welcome to a new game player!</h1>
+    <p>Press a button bellow to pull a new Star Wars card</p>
+</div>

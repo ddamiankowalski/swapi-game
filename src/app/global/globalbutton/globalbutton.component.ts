@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TooltipPosition } from '@angular/material/tooltip';
 
 interface tooltipConfig {
@@ -17,10 +17,19 @@ export class GlobalButtonComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.type)
   }
 
   private _tooltip!: tooltipConfig;
+
+  /**
+   * An event emitter to when the user clicks the button
+   */
+  @Output() btnclicked: EventEmitter<boolean> = new EventEmitter();
+
+  /**
+   * If set to true the button will become disabled
+   */
+  @Input() disabled: boolean = false;
 
   /**
    * String that is to be rendered inside the button
@@ -68,6 +77,10 @@ export class GlobalButtonComponent implements OnInit {
    */
   get tooltipPosition(): TooltipPosition {
     return this._tooltip?.position ?? 'below';
+  }
+
+  public clickBtn(): void {
+    this.btnclicked.emit(true);
   }
 
 }

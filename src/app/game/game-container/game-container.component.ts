@@ -9,12 +9,12 @@ import { ActivatedRoute } from '@angular/router';
   animations: [
     trigger('routeAnimations', [
       state('game', style({
-        height: '50vh'
+        height: '70vh'
       })),
       transition('* => game', [
         style({ overflow: 'hidden' }),
         group([
-          animate('.5s ease-in-out', style({ height: '50vh' }))
+          animate('.5s ease-in-out', style({ height: '70vh' }))
         ])
       ]),
       transition('game => *', [

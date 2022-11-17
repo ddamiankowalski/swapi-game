@@ -1,0 +1,5 @@
+<app-card [enemyModel]="game.getEnemyModel() | async" [cardModel]="game.getNewCardObservable() | async"></app-card>
+<div class="button-section">
+    <app-globalbutton [disabled]="game.isLoading" (btnclicked)="newRound()" type="raised" color="primary" text="next card"></app-globalbutton>
+    <app-globalbutton [disabled]="game.isLoading || !(game.getNewCardObservable() | async) || game.status === 'fight'" (btnclicked)="startFight()" type="raised" color="accent" text="fight"></app-globalbutton>
+</div>
